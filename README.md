@@ -1,4 +1,7 @@
 # twitter-connect-plugin
+
+this is an updated version of ManifestWebDesign/twitter-connect-plugin plugin that uses **account/verify_credentials.json** instead of **users/show.json** to get user details which grants the posibility to get user's email.
+
 Cordova/PhoneGap plugin to use Twitter Single Sign On
 
 Using Twitter's Fabric SDK, you can enable SSO with your Android and iOS apps. It's a fairly involved process, so I'll try to lay out every step necessary.
