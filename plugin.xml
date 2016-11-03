@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 		xmlns:android="http://schemas.android.com/apk/res/android"
 			id="twitter-connect-plugin2"
-	  version="0.6.4">
+	  version="0.6.5">
 	<name>Twitter Connect</name>
 	<description>Twitter Connect Plugin - Allows single-sign on logins using Twitter - fix get email address</description>
 	<license>Apache 2.0</license>
