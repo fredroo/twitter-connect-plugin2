@@ -49,11 +49,11 @@
 {
 	TWTRAPIClient *apiClient = [[Twitter sharedInstance] APIClient];
 
-	NSDictionary *requestParameters = [NSDictionary dictionaryWithObjectsAndKeys:[[[Twitter sharedInstance] session] userID], @"user_id", nil];
+	NSDictionary *requestParameters = [];
 	NSError *error = nil;
 	NSURLRequest *apiRequest = [apiClient URLRequestWithMethod:@"GET"
-														   URL:@"https://api.twitter.com/1.1/users/show.json"
-													parameters:requestParameters
+														   URL:@"https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true"
+													parameters:requestParameters;
 														 error:&error];
 	[apiClient sendTwitterRequest:apiRequest
 					   completion:^(NSURLResponse *response, NSData *data, NSError *error) {
