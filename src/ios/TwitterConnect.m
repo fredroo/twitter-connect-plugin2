@@ -53,7 +53,7 @@
 	NSError *error = nil;
 	NSURLRequest *apiRequest = [apiClient URLRequestWithMethod:@"GET"
 														   URL:@"https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true"
-													parameters:requestParameters;
+													parameters:requestParameters
 														 error:&error];
 	[apiClient sendTwitterRequest:apiRequest
 					   completion:^(NSURLResponse *response, NSData *data, NSError *error) {
