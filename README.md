@@ -1,4 +1,4 @@
-# twitter-connect-plugin
+# twitter-connect-plugin2
 
 this is an updated version of ManifestWebDesign/twitter-connect-plugin plugin that uses **account/verify_credentials.json** instead of **users/show.json** to get user details which grants the posibility to get user's email.
 
