@@ -112,8 +112,8 @@ public class TwitterConnect extends CordovaPlugin {
 	}
 
 	interface UserService {
-		@GET("/1.1/users/show.json")
-		void show(@Query("user_id") long id, Callback<Response> cb);
+		@GET("/1.1/account/verify_credentials.json")
+		void show(@Query("include_email") boolean includeMail, Callback<Response> cb);
 	}
 
 	private void showUser(final CallbackContext callbackContext) {
@@ -122,7 +122,7 @@ public class TwitterConnect extends CordovaPlugin {
 			public void run() {
 				UserServiceApi twitterApiClient = new UserServiceApi(Twitter.getSessionManager().getActiveSession());
 				UserService userService = twitterApiClient.getCustomService();
-				userService.show(Twitter.getSessionManager().getActiveSession().getUserId(), new Callback<Response>() {
+				userService.show(true, new Callback<Response>() {
 					@Override
 					public void success(Result<Response> result) {
 						try {
